@@ -176,10 +176,10 @@ KERNEL_FQ void m19850_mxx (KERN_ATTR_VECTOR ())
     u32 aes_key[4];
 
     //You can assign scalar values from a vector hash calculation without issue
-    aes_key[0] = sha1_hmac_ctx_vec.ipad.h[0];
-    aes_key[1] = sha1_hmac_ctx_vec.ipad.h[1];
-    aes_key[2] = sha1_hmac_ctx_vec.ipad.h[2];
-    aes_key[3] = sha1_hmac_ctx_vec.ipad.h[3];
+    aes_key[0] = sha1_hmac_ctx_vec.ipad.h[0].x;
+    aes_key[1] = sha1_hmac_ctx_vec.ipad.h[1].x;
+    aes_key[2] = sha1_hmac_ctx_vec.ipad.h[2].x;
+    aes_key[3] = sha1_hmac_ctx_vec.ipad.h[3].x;
 
     u32 aes_cbc_encrypt_xml_ks[44];
     u32 encrypted_block[4];
@@ -308,10 +308,10 @@ KERNEL_FQ void m19850_sxx (KERN_ATTR_VECTOR ())
     
     u32 aes_key[4];
 
-    aes_key[0] = sha1_hmac_ctx_vec.ipad.h[0];
-    aes_key[1] = sha1_hmac_ctx_vec.ipad.h[1];
-    aes_key[2] = sha1_hmac_ctx_vec.ipad.h[2];
-    aes_key[3] = sha1_hmac_ctx_vec.ipad.h[3];
+    aes_key[0] = sha1_hmac_ctx_vec.ipad.h[0].x;
+    aes_key[1] = sha1_hmac_ctx_vec.ipad.h[1].x;
+    aes_key[2] = sha1_hmac_ctx_vec.ipad.h[2].x;
+    aes_key[3] = sha1_hmac_ctx_vec.ipad.h[3].x;
 
     u32 aes_cbc_encrypt_xml_ks[44];
     u32 encrypted_block[4];
